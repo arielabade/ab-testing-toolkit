@@ -1,0 +1,76 @@
+========================================================================
+1. DESIGN, before the test runs
+========================================================================
+baseline                  5.0%
+minimum worthwhile lift   5.0% relative
+users per variant         122,124
+runtime at 20,000/day   12.2 days
+
+With only 7 days of traffic, the smallest detectable lift would be 6.6%.
+
+========================================================================
+2. READOUT, three scenarios
+========================================================================
+
+--- clear win
+VERDICT: SHIP
+  P(treatment better) = 100.0% and the observed lift of 9.1% clears the 5.0% bar.
+
+Frequentist
+  control            5.0000%
+  treatment          5.4545%
+  relative lift      +9.09%
+  p-value            0.0002
+  95% CI (absolute)  [+0.2144%, +0.6947%]
+
+Bayesian
+  P(treatment better)  100.0%
+  expected lift      +9.13%
+  95% credible       [+4.19%, +14.23%]
+  expected loss      0.000000 conversion rate
+
+Note: the p-value is P(data | no effect). P(treatment better) is
+P(effect | data). They are not the same statement and should not be
+swapped when the result is written up.
+
+--- real effect, below the bar worth shipping for
+VERDICT: HOLD
+  The effect looks real (P = 99.2%) but the lift of 3.0% is below the 5.0% worth shipping for.
+
+Frequentist
+  control            5.0000%
+  treatment          5.1500%
+  relative lift      +3.00%
+  p-value            0.0170
+  95% CI (absolute)  [+0.0268%, +0.2732%]
+
+Bayesian
+  P(treatment better)   99.2%
+  expected lift      +3.01%
+  95% credible       [+0.53%, +5.54%]
+  expected loss      0.000002 conversion rate
+
+Note: the p-value is P(data | no effect). P(treatment better) is
+P(effect | data). They are not the same statement and should not be
+swapped when the result is written up.
+
+--- promising number, but never powered to answer
+VERDICT: INCONCLUSIVE
+  Not powered to detect 5.0%: needs 122,124 per variant, has 5,000. Absence of a result is not evidence of no effect.
+
+Frequentist
+  control            5.0000%
+  treatment          5.5000%
+  relative lift      +10.00%
+  p-value            0.2623
+  95% CI (absolute)  [-0.3742%, +1.3742%]
+
+Bayesian
+  P(treatment better)   86.9%
+  expected lift      +10.38%
+  95% credible       [-6.86%, +29.97%]
+  expected loss      0.000292 conversion rate
+
+Note: the p-value is P(data | no effect). P(treatment better) is
+P(effect | data). They are not the same statement and should not be
+swapped when the result is written up.
