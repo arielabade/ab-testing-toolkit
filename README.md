@@ -1,9 +1,4 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/header-dark.svg">
-    <img alt="A/B Testing Toolkit: design an experiment, read it honestly, and decide" src="assets/brand/header-light.svg" width="100%">
-  </picture>
-</p>
+<p align="center"><img alt="A/B Testing Toolkit: design an experiment, read it honestly, and decide" src="assets/brand/header.svg" width="100%"></p>
 
 <p align="center">
   <img alt="Method stage: validate" src="https://img.shields.io/badge/stage-validate-5B6CFF?style=flat-square&labelColor=050505">
@@ -16,19 +11,9 @@
 tested and found nothing" from "we never had the power to find it". Those two readings lead to
 opposite actions.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/kpis-dark.svg">
-    <img alt="CUPED cuts variance 75.3%; 122,124 users per variant for a 5% lift; 2,000 A/A tests validate calibration" src="assets/brand/kpis-light.svg" width="100%">
-  </picture>
-</p>
+<p align="center"><img alt="CUPED cuts variance 75.3%; 122,124 users per variant for a 5% lift; 2,000 A/A tests validate calibration" src="assets/brand/kpis.svg" width="100%"></p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/arc-dark.svg">
-    <img alt="Context, problem, strategy and result of the case" src="assets/brand/arc-light.svg" width="100%">
-  </picture>
-</p>
+<p align="center"><img alt="Context, problem, strategy and result of the case" src="assets/brand/arc.svg" width="100%"></p>
 
 ---
 
@@ -83,12 +68,7 @@ asserts that relationship.
 
 ## 04 — Result
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/chart-dark.svg">
-    <img alt="Smallest detectable lift: 25.9% at 5,000 users, 12.6% at 20,000, 5.5% at 100,000, 5.0% at 122,124 per variant" src="assets/brand/chart-light.svg" width="100%">
-  </picture>
-</p>
+<p align="center"><img alt="Smallest detectable lift: 25.9% at 5,000 users, 12.6% at 20,000, 5.5% at 100,000, 5.0% at 122,124 per variant" src="assets/brand/chart.svg" width="100%"></p>
 
 **Design is where most tests are lost.** At a 5% baseline, detecting a 5% relative lift needs
 **122,124 users per variant**. A team with 20,000 users a day that plans a one-week test can only
@@ -156,12 +136,7 @@ notebooks/              experiment failure modes
 
 ---
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/track-dark.svg">
-    <img alt="ABADE method: validate, scale, retain, build. This repository: validate" src="assets/brand/track-light.svg" width="100%">
-  </picture>
-</p>
+<p align="center"><img alt="ABADE method: validate, scale, retain, build. This repository: validate" src="assets/brand/track.svg" width="100%"></p>
 
 <p align="center">
   <a href="https://github.com/arielabade/tracking-attribution-lab">← Trust the events first</a> &nbsp;·&nbsp;
