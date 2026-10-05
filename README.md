@@ -11,7 +11,28 @@
 tested and found nothing" from "we never had the power to find it". Those two readings lead to
 opposite actions.
 
-<p align="center"><img alt="CUPED cuts variance 75.3%; 122,124 users per variant for a 5% lift; 2,000 A/A tests validate calibration" src="assets/brand/kpis.svg" width="100%"></p>
+<p align="center"><img alt="Three of three worked readouts where the naive call differs from the correct one; CUPED removes 76% of variance at r=0.87; 122,124 users per variant for a 5% lift" src="assets/figures/headline.svg" width="100%"></p>
+
+<p align="center"><img alt="Three readouts with confidence intervals: a clear win ships, a real effect below the bar holds, and an underpowered test is inconclusive rather than negative" src="assets/figures/verdicts.svg" width="100%"></p>
+
+> **Decision.** Never read a test without a minimum worthwhile lift and a power calculation. "We found nothing" and "we could never have found it" lead to opposite actions.
+
+<details>
+<summary><b>What is in this repository</b></summary>
+
+| | |
+| --- | --- |
+| **The question** | Can this experiment answer its question, and what do we do with the answer? |
+| **The data** | None. The subject is the procedure, so the figures call the library itself on the worked scenarios in `example_readout.py`. |
+| **The method** | Frequentist and Bayesian readouts side by side, CUPED variance reduction, and a decision rule that takes the business bar as an input. |
+| **The finding** | Most experiment failures are decision failures, not statistical ones. |
+
+```
+src/abtest/ design (power, MDE), CUPED, frequentist and Bayesian analysis, the report, figures
+tests/      calibration against 2,000 simulated A/A tests, and the decision rule
+```
+
+</details>
 
 <p align="center"><img alt="Context, problem, strategy and result of the case" src="assets/brand/arc.svg" width="100%"></p>
 
@@ -68,7 +89,6 @@ asserts that relationship.
 
 ## 04 — Result
 
-<p align="center"><img alt="Smallest detectable lift: 25.9% at 5,000 users, 12.6% at 20,000, 5.5% at 100,000, 5.0% at 122,124 per variant" src="assets/brand/chart.svg" width="100%"></p>
 
 **Design is where most tests are lost.** At a 5% baseline, detecting a 5% relative lift needs
 **122,124 users per variant**. A team with 20,000 users a day that plans a one-week test can only
@@ -87,6 +107,12 @@ detect a **6.6%** lift, so a real 5% improvement would be recorded as "no effect
 
 > **Decision.** Do not launch a test without a power calculation and a minimum worthwhile lift. Read
 > HOLD and INCONCLUSIVE as different instructions: *not worth it* and *not yet known*.
+
+---
+
+<p align="center"><img alt="Smallest detectable lift against days of traffic, with the runtime a 5% lift actually requires" src="assets/figures/power_curve.svg" width="100%"></p>
+
+<p align="center"><img alt="CUPED variance reduction against covariate correlation, expressed as the traffic it is worth" src="assets/figures/cuped_variance.svg" width="100%"></p>
 
 ---
 
